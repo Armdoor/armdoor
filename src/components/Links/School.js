@@ -2,6 +2,7 @@ import React from 'react';
 import Linkheader from '../Linkheader/Linkheader';
 import styled from 'styled-components';
 import Footer from '../Footer/Footer';
+import { Fade } from "react-awesome-reveal";
 
 const School = () => {
   return (
@@ -10,7 +11,7 @@ const School = () => {
       <h1>University Of Maryland, College Park</h1>
 
       <Grid>
-        
+            <Fade direction='left'>
             <CardContainer>
             <h2>Fall 2022</h2>
             <p>CMSC 131: Object-Oriented Programming I</p>
@@ -19,7 +20,8 @@ const School = () => {
             <p>GEOG 330: Society and Sustainability</p>
             <p>PHYS 235: The Manhattan Project</p>
             </CardContainer>
-
+            </Fade>
+            <Fade direction='right'>
             <CardContainer>
             <h2>Spring 2023</h2>
             <p>CMSC 132: Object-Oriented Programming II</p>
@@ -27,15 +29,16 @@ const School = () => {
             <p>COMM 107: Oral Communication: Principles and Practices</p>
             <p>MUSC 210: The Impact of Music on Life </p>
             </CardContainer>
-
+            </Fade>
+            <Fade direction='left'>
             <CardContainer>
                 <h2>Summer 2023</h2>
                 <p>CMSC 216: Introduction to Computer Systems</p>
                 <p>MATH 461: Linear Algebra for Scientists and Engineers</p>
                 <p>ENGL 393: Technical Writing</p>
             </CardContainer>
-
-
+            </Fade>
+            <Fade direction='right'>
             <CardContainer>
                 <h2>Fall 2023</h2>
                 <p>CMSC 330: Organization of Programming Languages</p>
@@ -44,7 +47,8 @@ const School = () => {
                 <p>EDHD 200: Paradigms and Perspectives in Human Development</p>
                 <p>EDHD 306: Research Methods in Human Development</p>
             </CardContainer>
-        
+            </Fade>
+            <Fade direction='left'>
             <CardContainer>
                 <h2>Spring 2024</h2>
                 <p>CMSC 320: Introduction to Data Science</p>
@@ -53,6 +57,7 @@ const School = () => {
                 <p>EDHD 320: Human Development Through the Lifespan</p>
                 <p>PHIL 220: Bioethics: Regulating Right and Wrong</p>
             </CardContainer>
+            </Fade>
         </Grid>
       <Footer/>
     </Container>
@@ -62,7 +67,7 @@ const School = () => {
 export default School;
 
 const Container = styled.div`
-  height: 107vh;
+
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -73,8 +78,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   h1{
-    padding-top: 10vh;
-    padding-bottom: 30px;
+    padding-top: 15vh;
+    padding-bottom: 50px;
   }
 `;
 
@@ -110,7 +115,8 @@ const CardContainer = styled.div`
 const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 15px;
+gap: 20px;
 grid-auto-rows: minmax(100px, auto);
-padding-bottom: 30px;
+padding-bottom: 50px;
+
 `

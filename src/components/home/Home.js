@@ -13,7 +13,7 @@ const Home = () => {
           <Fade direction='down'>
             <h2 style={{ fontSize: '1.75rem', fontWeight: '800' }}>Hello,</h2>
             <h1 style={{ fontSize: '3rem' }}>I'm <HighlightedText>Aarambh</HighlightedText></h1>
-            Computer Science Student
+            <p> Computer Science Student</p>
             <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px'}}>At University of Maryland, College Park.</p>
           </Fade>
           <Fade direction='up'>
@@ -49,11 +49,15 @@ const Wrap = styled.div`
 
 const ItemText = styled.div`
   position: absolute;
-  top: 25vh; 
+  top: 35vh; 
   left: 5vw;
   padding: 0;  
   font-size: 3rem;
   font-weight: 700;
+  p{
+    font-size: 2rem;
+  font-weight: 700;
+  }
 `;
 
 const HighlightedText = styled.span`

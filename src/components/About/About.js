@@ -7,7 +7,7 @@ const About = () => {
 
   return (
      <Container id='about'>
-        <Fade top>
+        <Fade direction='down'>
         <TextItem>
             <h1>What I Do? </h1>
         </TextItem>
@@ -22,6 +22,8 @@ const About = () => {
                 <p>Explore the world of iOS development and create powerful, user-friendly applications for Apple devices.</p>
                 </Con>
             </Card>
+            </Fade>
+            <Fade direction='left'>
             <Card>
                 <img src='/images/ui.png' alt='apple'/>
                 <Con>
@@ -29,6 +31,8 @@ const About = () => {
                 <p>Dive into the realm of web development, crafting seamless user interfaces and building interactive web applications.</p>
                 </Con>
             </Card>
+            </Fade>
+            <Fade direction='up'>
             <Card>
                 <img src='/images/web.png' alt='apple'/>
                 <Con>
