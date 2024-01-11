@@ -1,5 +1,5 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -10,13 +10,13 @@ const Home = () => {
   return (
       <Wrap id='home'>
         <ItemText>
-          <Fade top>
+          <Fade direction='down'>
             <h2 style={{ fontSize: '1.75rem', fontWeight: '800' }}>Hello,</h2>
             <h1 style={{ fontSize: '3rem' }}>I'm <HighlightedText>Aarambh</HighlightedText></h1>
             Computer Science Student
             <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px'}}>At University of Maryland, College Park.</p>
           </Fade>
-          <Fade bottom>
+          <Fade direction='up'>
           <Link to = '/story'> 
             <StoryButton>
                 My Story

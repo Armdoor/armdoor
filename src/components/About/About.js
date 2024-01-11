@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
+
 
 const About = () => {
+
   return (
      <Container id='about'>
         <Fade top>
@@ -12,7 +14,7 @@ const About = () => {
         </Fade>
         
         <Cards>
-        <Fade bottom>
+        <Fade direction='down'>
             <Card>
                 <img src='/images/ios.png' alt='apple'/>
                 <Con>

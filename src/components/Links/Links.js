@@ -1,35 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
+import { Fade } from "react-awesome-reveal";
 const Links = () => {
   return (
       <Container id='link'>
-        <Fade top>
+
         <TextArea>
+            <Fade direction='down'>
             <h2>Links</h2>
+            </Fade>
         </TextArea>
-        </Fade>
+
         <Buttons>
-            <Fade left>
+            <Fade direction='left'>
             <Button href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf">
                 <img src="/images/resume.png" alt='Resume'  ></img>
                 
             </Button>
-            </Fade>
-            <Fade left>
             <Button href="https://github.com/Armdoor">
                 <img src="/images/git.png" alt='Github'  ></img>
                 
             </Button>
             </Fade>
-            <Fade right>
+            <Fade direction='right'>
             <Button href="https://www.linkedin.com/in/akshit-sanoria/">
                 <img src="/images/linkedin.png" alt='Linkedin'  ></img>
                 
             </Button>
-            </Fade>
-            <Fade right>
             <Link to = '/school'> 
             <Button>
                 <img src="/images/school.png" alt='School'  ></img>
