@@ -81,6 +81,13 @@ const Container = styled.div`
     padding-top: 15vh;
     padding-bottom: 50px;
   }
+
+  @media only screen and (max-width: 485px) {
+    h1{
+      font-size: 25px;
+      padding-left: 20px;
+    }
+  }
 `;
 
 
@@ -94,6 +101,7 @@ const CardContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
+  text-align: start;
   justify-content: center; 
   transition: transform 0.3s ease-in-out;
   &:hover {
@@ -110,6 +118,30 @@ const CardContainer = styled.div`
     margin-bottom: 5px;
     font-weight: 400;
   }
+  @media only screen and (max-width: 485px) {
+    height: auto;
+  width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    justify-content: center;
+    h2{
+      color: #81B8D7;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display: flex;
+      justify-content: center; 
+      font-size: 18px;
+    }
+    p{
+      margin-bottom: 5px;
+      font-weight: 400;
+      padding-top: 5px;
+      font-size: 12px;
+    }
+  }
 `;
 
 const Grid = styled.div`
@@ -118,5 +150,9 @@ grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 grid-auto-rows: minmax(100px, auto);
 padding-bottom: 50px;
-
-`
+@media only screen and (max-width: 485px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}`;
