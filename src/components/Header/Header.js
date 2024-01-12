@@ -1,23 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Link as ScrollLink } from 'react-scroll';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 const Header = () => {
-    
+  const [showMenu,setMenu] = useState(false);
+
+  
+
   return (
     <Container>
-
-        <Logo src='/images/logon.png' alt='logo' />
-
+      <Logo src='/images/logon.png' alt='logo' />
       <Menu>
-        <nav>
-          <ul>
-            <li> <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>Home</ScrollLink></li>
-            <li><ScrollLink to="about" spy={true} smooth={true} offset={-70} duration={500}>About</ScrollLink></li>
-            <li><ScrollLink to="link" spy={true} smooth={true} offset={-70} duration={500}>Links</ScrollLink></li>
-            <li><ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>Contact</ScrollLink></li>
-          </ul>
-        </nav>
+        <li> <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>Home</ScrollLink></li>
+        <li><ScrollLink to="about" spy={true} smooth={true} offset={-70} duration={500}>About</ScrollLink></li>
+        <li><ScrollLink to="link" spy={true} smooth={true} offset={-70} duration={500}>Links</ScrollLink></li>
+        <li><ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500}>Contact</ScrollLink></li>
       </Menu>
+      <BurgerBtn onClick={() => setMenu(!showMenu)}>
+        {showMenu ? (
+          <CustClose onClick={() => setMenu(false)} />
+        ) : (
+          <CustMenu />
+        )}
+      </BurgerBtn>
+
+      <BurgerMenu style={{ display: showMenu ? 'flex' : 'none' }}>
+        <CloseWrap>
+          {showMenu && <CustClose onClick={() => setMenu(false)} />}
+        </CloseWrap>
+        <li> <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500} onClick={()=>setMenu(false)}>Home</ScrollLink></li>
+        <li><ScrollLink to="about" spy={true} smooth={true} offset={-70} duration={500} onClick={()=>setMenu(false)}>About</ScrollLink></li>
+        <li><ScrollLink to="link" spy={true} smooth={true} offset={-70} duration={500} onClick={()=>setMenu(false)}>Links</ScrollLink></li>
+        <li><ScrollLink to="contact" spy={true} smooth={true} offset={-70} duration={500} onClick={()=>setMenu(false)}>Contact</ScrollLink></li>
+      
+      </BurgerMenu>
+      
+
     </Container>
   );
 };
@@ -30,36 +49,39 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  backdrop-filter: blur(0.5px);
-  background-color: rgba(255, 255, 255, 0.5);
   padding: 0 20px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+  backdrop-filter: blur(0.5px);
+  background-color: rgba(255, 255, 255, 0.5);
 `;
 
+
+
 const Menu = styled.div`
-  nav {
-    ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: space;
+font-weight: 600;
+text-transform: uppercase;
+padding: 0 10px;
+flex-wrap: nowrap;
+cursor: pointer;
+li{
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 10px;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
 
-      li {
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 0 10px;
-        flex-wrap: nowrap;
-        cursor: pointer;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 485px){
     display: none;
   }
+  
 `;
 
 const Logo = styled.img`
@@ -67,3 +89,57 @@ const Logo = styled.img`
   height: 40px;
   width: 120px;
 `;
+
+const CustMenu = styled(MenuIcon)`
+cursor: pointer;
+
+
+
+`
+
+const BurgerMenu = styled.div`
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+height: 100vh;
+background: white;
+width: 300px;
+z-index: 16;
+list-style: none;
+padding: 20px;
+display: flex;
+flex-direction: column;
+text-align: start;
+
+li{
+  padding: 15px 0; 
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-weight: 600;
+ 
+}
+
+@media only screen and (min-width: 400px){
+  display: none;
+}
+
+
+`
+const BurgerBtn = styled.div`
+cursor: pointer;
+
+@media only screen and (min-width: 485px){
+  display: none;
+}
+
+
+`
+
+const CustClose = styled(CloseIcon)`
+cursor: pointer;
+`
+
+const CloseWrap = styled.div`
+display: flex;
+justify-content: flex-end;
+`

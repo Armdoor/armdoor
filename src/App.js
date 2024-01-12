@@ -102,6 +102,10 @@ const DownArrow = styled.img`
   animation: animateDown infinite 1.5s;
   cursor: pointer;
   z-index: 100;
+  
+  @media only screen and (min-width: 400px){
+    display: none;
+  }
 `;
 
 export default App;

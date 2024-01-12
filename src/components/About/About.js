@@ -50,7 +50,8 @@ export default About
 
 const Container = styled.div`
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     background-image: url('/images/aboutbg.jpg');
@@ -62,6 +63,8 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: -7;
+    
 `
 
 const TextItem = styled.div`
@@ -69,22 +72,27 @@ font-size: 2rem;
 font-weight: 600;
 padding-top: 3rem;
 margin-bottom: 3rem;
-h1{
-    color: #e0e0e0;
+color: #e0e0e0;
+
+@media only screen and (max-width: 414px){
+    font-size: 14px;
 }
 `
 
 const Cards = styled.div`
     
     margin: 1.5rem;
-    width: 100vw;
+    width: 100%;
     max-width: 50%;
     text-align: left;
-    color: white;`
+    color: white;
+    
+   
+    `
 
 const Card = styled.div`
-height: 110px;
-width: 800px;
+height: 100%;
+width: 100%;
 backdrop-filter: blur(2px);
 background-color: rgba(255, 255, 255, 0.5);
 border-radius: 0.75rem;
@@ -100,7 +108,15 @@ img {
   transition: transform 0.3s ease-in-out;
   &:hover {
     transform: scale(1.05); /* Increase scale on hover */
-  }r
+  }
+
+  @media only screen and (max-width: 414px){
+    img {
+        margin-right: 0.25rem;
+        max-width: 50px; 
+        height: auto;
+      }
+}
 `
 const Con = styled.div`
 display: flex;

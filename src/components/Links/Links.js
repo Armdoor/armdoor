@@ -46,6 +46,7 @@ export default Links
 const Container = styled.div`
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     background-size: cover;
     background-position: center;
     background-image: url('/images/linksbg.jpg');
@@ -54,6 +55,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     `
 
 
@@ -65,11 +67,24 @@ const TextArea = styled.div`
     h1{
         color: white;
     }
+    @media only screen and (max-width: 485px){
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+    }
+
 `
 const Buttons = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: 414px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const Button = styled.a`
@@ -93,6 +108,27 @@ const Button = styled.a`
   img {
     height: 150px;
     width: 150px;
+  }
+  @media only screen and (max-width: 485px){
+
+    height: 75px;
+    width: 75px;
+    margin: 0.25rem;
+  border-radius: 1rem;
+  img{
+    height: 65px;
+    width: 65px;
+  }
+  }
+
+  @media only screen and (max-width: 900px){
+    height: 125px;
+  width: 125px;
+  border-radius: 1.5rem;
+  img{
+    height: 100px;
+    width: 100px;
+  }
   }
 `;
 

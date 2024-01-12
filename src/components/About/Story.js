@@ -47,8 +47,7 @@ Now in my third semester, I can confidently say it's been the most challenging y
 export default Story
 
 const Container = styled.div`
-
-height: 107vh;
+height: auto;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -73,5 +72,18 @@ p{
   color: #333333;
   font-weight: 600;
   font-family: 'Poppins';font-size: 19px;
+}
+@media (min-width: 768px) {
+  padding: 20px;
+  p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  padding: 50px;
+  p {
+    font-size: 19px;
+  }
 }
 `
