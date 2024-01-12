@@ -122,6 +122,8 @@ const StyledForm = styled.form`
   textarea.msg::placeholder {
     color: #393c41;
     font-weight: 300;
+    max-width:  500px;
+    max-height:  300px;
   }
 
   input,

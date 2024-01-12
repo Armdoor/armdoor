@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Link as ScrollLink } from 'react-scroll';
 import {MenuFoldOutlined } from '@ant-design/icons'
-import CloseOutlined from '@ant-design/icons';
+import {CloseOutlined} from '@ant-design/icons';
 const Header = () => {
   const [showMenu,setMenu] = useState(false);
 
