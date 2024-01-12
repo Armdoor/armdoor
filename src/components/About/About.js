@@ -63,74 +63,87 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: -7;
+
     
-`
+`;
 
 const TextItem = styled.div`
 font-size: 2rem;
 font-weight: 600;
 padding-top: 3rem;
 margin-bottom: 3rem;
-color: #e0e0e0;
+h1{color: white;}
 
-@media only screen and (max-width: 414px){
-    font-size: 14px;
+@media only screen and (max-width: 485px){
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
 }
-`
+`;
 
 const Cards = styled.div`
-    
-    margin: 1.5rem;
+    //margin: 1.5rem;
     width: 100%;
     max-width: 50%;
     text-align: left;
-    color: white;
-    
-   
-    `
+    `;
 
-const Card = styled.div`
-height: 100%;
-width: 100%;
-backdrop-filter: blur(2px);
-background-color: rgba(255, 255, 255, 0.5);
-border-radius: 0.75rem;
-display: flex;
-  align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-img {
-    margin-right: 1rem;
-    max-width: 100px; 
-    height: auto;
-  }
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.05); /* Increase scale on hover */
-  }
-
-  @media only screen and (max-width: 414px){
+    const Card = styled.div`
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  
     img {
-        margin-right: 0.25rem;
-        max-width: 50px; 
-        height: auto;
-      }
-}
-`
-const Con = styled.div`
-display: flex;
-    flex-direction: column;
-    h2,
-    p {
-      margin: 0;
+      height: auto; /* Adjust the height as needed */
+      width: auto; /* Auto width to maintain aspect ratio */
+      margin-right: 1rem; /* Add margin to create space between image and text */
     }
+  
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    @media only screen and (max-width: 485px) {
+      img {
+        display: none;
+      }
+    }
+  `;
+
+const Con = styled.div`
+    display: flex;
+    flex-direction: column;
+    // h2,
+    // p {
+    //   margin: 0;
+    // }
     h2{
         color: #333333;
     }
     p{
         padding-top: 8px;
     }
-`
+
+    @media only screen and (max-width: 485px) {
+        h2{
+            font-size: 18px;
+        }
+        p{
+            padding-top: 5px;
+            font-size: 12px;
+
+        }
+      }
+`;
 
 

@@ -96,7 +96,7 @@ const TextArea = styled.div`
   padding-top: 3rem;
   margin-bottom: 1.5rem;
   h2 {
-    color: #393c41;
+    color: white;
   }
 `;
 
