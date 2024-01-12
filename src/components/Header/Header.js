@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Link as ScrollLink } from 'react-scroll';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import {MenuFoldOutlined } from '@ant-design/icons'
+import CloseOutlined from '@ant-design/icons';
 const Header = () => {
   const [showMenu,setMenu] = useState(false);
 
@@ -90,7 +90,7 @@ const Logo = styled.img`
   width: 120px;
 `;
 
-const CustMenu = styled(MenuIcon)`
+const CustMenu = styled(MenuFoldOutlined)`
 cursor: pointer;
 
 
@@ -135,7 +135,7 @@ cursor: pointer;
 
 `
 
-const CustClose = styled(CloseIcon)`
+const CustClose = styled(CloseOutlined )`
 cursor: pointer;
 `
 
