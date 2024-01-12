@@ -106,10 +106,24 @@ const StyledForm = styled.form`
   align-items: center;
   justify-content: center;
   text-align: center;
+  
   input,
   textarea,
   button {
     margin-bottom: 1rem;
+    width: 300px;
+    padding: 0.5rem;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  textarea{
+    max-width:  500px;
+    max-height:  300px;
+    min-width:  80px;
+    min-height:  80px;
   }
   input.name::placeholder {
     color: #393c41;
@@ -122,21 +136,9 @@ const StyledForm = styled.form`
   textarea.msg::placeholder {
     color: #393c41;
     font-weight: 300;
-    max-width:  500px;
-    max-height:  300px;
+   
   }
 
-  input,
-  textarea,
-  button {
-    width: 300px;
-    padding: 0.5rem;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.5);
-  }
 
   button {
     width: 100px;
@@ -148,6 +150,12 @@ const StyledForm = styled.form`
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     transition: background-color 0.3s;
     &:hover {
       color: white;
