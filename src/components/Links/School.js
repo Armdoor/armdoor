@@ -58,6 +58,17 @@ const School = () => {
                 <p>PHIL 220: Bioethics: Regulating Right and Wrong</p>
             </CardContainer>
             </Fade>
+            <Fade direction='right'>
+            <CardContainer>
+                <h2>Fall 2024</h2>
+                <p>CMSC 422: Introduction to Machine Learning</p>
+                <p>CMSC 452: Design and Analysis of Computer Algorithms</p>
+                <p>CMSC 471: Introduction to Data Visualization</p>
+                <p>CMSC 390O: Special Topics in CS; The Coding Interview</p>
+                <p>EDHD 4xx: </p>
+                <p>EDHD 4xx: </p>
+            </CardContainer>
+            </Fade>
         </Grid>
       <Footer/>
     </Container>
