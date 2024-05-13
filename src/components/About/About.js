@@ -33,13 +33,17 @@ const About = () => {
             </Card>
             </Fade>
             <Fade direction='up'>
-            <Card>
-                <img src='/images/web.png' alt='apple'/>
-                <Con>
-                <h2>Machine Learning and Data Science</h2>  
-                <p>Delve into the fascinating fields of machine learning and data science, extracting insights and creating intelligent systems.</p>
-                </Con>
-            </Card>
+            <Link to = '/Ml'> 
+            <Button>
+                <Card>
+                    <img src='/images/web.png' alt='apple'/>
+                    <Con>
+                    <h2>Machine Learning and Data Science</h2>  
+                    <p>Delve into the fascinating fields of machine learning and data science, extracting insights and creating intelligent systems.</p>
+                    </Con>
+                </Card>
+              </Button>
+            </Link>
             </Fade>
         </Cards>
      </Container>
