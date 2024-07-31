@@ -11,10 +11,10 @@ const Home = () => {
       <Wrap id='home'>
         <ItemText>
           <Fade direction='down'>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: '800' }}>Hello,</h2>
-            <h1 style={{ fontSize: '3rem' }}>I'm <HighlightedText>Aarambh</HighlightedText></h1>
-            <p> Computer Science Student</p>
-            <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px'}}>At University of Maryland, College Park.</p>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: '800', color: 'white' }}>Hello,</h2>
+            <h1 style={{ fontSize: '3rem' , color: 'white'}}>I'm <HighlightedText>Aarambh</HighlightedText></h1>
+            <p style={ {color: 'white'}}> Computer Science Student</p>
+            <p style={{ fontSize: 'large', fontWeight: '520', paddingBottom: '15px', color: 'white'}}>At University of Maryland, College Park.</p>
           </Fade>
           <Fade direction='up'>
           <Link to = '/story'> 
@@ -40,7 +40,7 @@ const Wrap = styled.div`
   width: 100vw;
   background-size: cover;
   background-position: center;
-  background-image: url('/images/homebg.jpg');
+  // background-image: url('/images/bkg3.jpg');
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ const HighlightedText = styled.span`
 
 
 const StoryButton = styled.div`
-  background-color: rgba(23, 26, 32, 0.8);  
+  background-color: #333333;  
   height: 45px;
   width: 125px;
   color: white;

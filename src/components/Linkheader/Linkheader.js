@@ -6,10 +6,10 @@ const Linkheader = () => {
   return (
     <Container>
 
-        <Logo src='/images/logon.png' alt='logo' />
+        <Logo src='/images/log.png' alt='logo' />
 
       <Menu>
-            <li> <Link to="/" >Home</Link></li>
+            <li style={{color: "white"}}> <Link to="/" >Home</Link></li>
       </Menu>
     </Container>
   );
@@ -29,7 +29,7 @@ left: 0;
 right: 0;
 z-index: 1;
 backdrop-filter: blur(0.5px);
-background-color: rgba(255, 255, 255, 0.5);
+border-bottom: 2px solid #1F1F1F;
 `;
 
 const Menu = styled.div`

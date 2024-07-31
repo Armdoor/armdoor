@@ -82,7 +82,7 @@ const Container = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background-image: url('/images/scbg.jpg');
+  background-image: url('/images/bkg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -108,8 +108,8 @@ const CardContainer = styled.div`
   width: 500px;
   padding-left: 25px;
   border-radius: 2rem;
-  backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(.5px);
+  background: rgba(51, 51, 51, 0.8);
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -119,7 +119,7 @@ const CardContainer = styled.div`
     transform: scale(1.05); /* Increase scale on hover */
   }
   h2{
-    color: #81B8D7;
+    color: white;
     padding-top: 0px;
     padding-bottom: 20px;
     display: flex;
@@ -128,6 +128,7 @@ const CardContainer = styled.div`
   p{
     margin-bottom: 5px;
     font-weight: 400;
+    color: #E0E0E0;
   }
   @media only screen and (max-width: 485px) {
     height: auto;

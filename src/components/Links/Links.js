@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import { Fade } from "react-awesome-reveal";
 const Links = () => {
+
+
+  const [hoverStates, setHoverStates] = useState({
+    resume: false,
+    github: false,
+    linkedin: false,
+    school: false
+  });
+
+  const handleHover = (button, isHovered) => {
+    setHoverStates(prev => ({ ...prev, [button]: isHovered }));
+  };
+
   return (
       <Container id='link'>
 
@@ -13,28 +26,40 @@ const Links = () => {
         </TextArea>
 
         <Buttons>
-            <Fade direction='left'>
-            <Button href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf">
-                <img src="/images/resume.png" alt='Resume'  ></img>
-                
+        <Fade direction='left'>
+          <Button 
+            href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf"
+            onMouseEnter={() => handleHover('resume', true)} 
+            onMouseLeave={() => handleHover('resume', false)}
+          >
+            <img src={hoverStates.resume ? "/images/cv-dark.png" : "/images/cv-light.png"} alt='Resume' />
+          </Button>
+          <Button 
+            href="https://github.com/Armdoor"
+            onMouseEnter={() => handleHover('github', true)} 
+            onMouseLeave={() => handleHover('github', false)}
+          >
+            <img src={hoverStates.github ? "/images/github-dark.png" : "/images/github-light.png"} alt='Github' />
+          </Button>
+        </Fade>
+        <Fade direction='right'>
+          <Button 
+            href="https://www.linkedin.com/in/akshit-sanoria/"
+            onMouseEnter={() => handleHover('linkedin', true)} 
+            onMouseLeave={() => handleHover('linkedin', false)}
+          >
+            <img src={hoverStates.linkedin ? "/images/lk-dark.png" : "/images/linkedin.png"} alt='Linkedin' />
+          </Button>
+          <Link to='/school'>
+            <Button 
+              onMouseEnter={() => handleHover('school', true)} 
+              onMouseLeave={() => handleHover('school', false)}
+            >
+              <img src={hoverStates.school ? "/images/sch-dark.png" : "/images/sch.png"} alt='School' />
             </Button>
-            <Button href="https://github.com/Armdoor">
-                <img src="/images/git.png" alt='Github'  ></img>
-                
-            </Button>
-            </Fade>
-            <Fade direction='right'>
-            <Button href="https://www.linkedin.com/in/akshit-sanoria/">
-                <img src="/images/linkedin.png" alt='Linkedin'  ></img>
-                
-            </Button>
-            <Link to = '/school'> 
-            <Button>
-                <img src="/images/school.png" alt='School'  ></img>
-            </Button>
-            </Link>
-            </Fade>
-        </Buttons>
+          </Link>
+        </Fade>
+      </Buttons>
 
 
       </Container>
@@ -47,16 +72,12 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url('/images/linksbg.jpg');
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
-    `
+    `;
 
 
 const TextArea = styled.div`
@@ -92,7 +113,7 @@ const Button = styled.a`
   width: 200px;
   border-radius: 2rem;
   backdrop-filter: blur(2px);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #333333;
   border: none;
   display: flex;
   align-items: center;
@@ -103,6 +124,7 @@ const Button = styled.a`
   
   &:hover {
     background-color: #dcdcdc; /* Add a hover effect */
+
   }
 
   img {

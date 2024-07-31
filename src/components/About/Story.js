@@ -9,34 +9,55 @@ const Story = () => {
       <Linkheader/>
       <TextArea>
         <Fade direction='left'>
-        <p>
-        Hi, I'm Akshit Sanoria, but you can call me Aarambh. My journey in the States began on January 13, 2021, where I spent my initial 11 days at Red Roof Inn Ames and one more night at Best Western Plus University Park Inn & Suites. On January 25, I moved into my first apartment with no mattress, but thankfully, my roommates shared their couch until my mattress arrived. As a 19-year-old, I embarked on my new life in a new country, devoid of friends and family.
+        <p>My freshman year of high school when we were introduced to Java. We started with the basics, like loops and printing statements on BlueJ, and by the end of the course, we were creating simple shapes like triangles and diamonds using loops. I hated that class. However, I was always fascinated by space and the cosmos, ever since watching "Cosmos" in 2014. I dreamed of pursuing a career related to space, rockets, and the unknown.
         </p>
         </Fade>
         <Fade direction='right'>
-        <p>
-          At that time, I was studying Mechanical Engineering at Iowa State University, Ames. My first job at Friley's Windows, part of Iowa State Dining, began to shape my interpersonal skills, teamwork, and adaptability. Working at a campus dining facility taught me valuable lessons in customer service and communication, enhanced my attention to detail and multitasking abilities, and provided significant personal and professional growth.
-          </p>
+        <p>Because of my interest in space and rockets, combined with a desire to engage in technical problem-solving, I decided to pursue Mechanical Engineering with the hope of pivoting to Aerospace Engineering for my master's. I accepted an offer from Iowa State University (ISU). During my freshman year at ISU, all engineering students were required to take an introductory engineering course that included learning MATLAB. When coding appeared on the syllabus, my immediate reaction was, "Not this again!" (insert crying emoji here).
+         </p>
           </Fade>
           <Fade direction='left'>
           <p>
-          Amidst the ongoing COVID cases, my classes were offline, and a specific class, "Engineering Problem with Computer Applications Laboratory," changed my perspective on coding. Despite previous struggles, I discovered my enjoyment for coding and decided to switch my major to computer science. During the summer, I applied to more schools and received acceptance from Arizona State University with a $16,000 scholarship.
+          To my surprise, I enjoyed the coding aspect of the course so much that I decided to switch my major to Computer Science. Embracing this newfound passion, I began seeking financial opportunities and applied for a transfer to Arizona State University. I was thrilled to be accepted with a New American University Scholarship worth $16,000.
           </p>
           </Fade>
           <Fade direction='right'>
           <p>
-          In August, I moved to Arizona, starting my first semester as a computer science student with in-person classes. After a year, feeling unchallenged, I sought advice from a senior friend and decided to transfer. By April, I got an admission offer from the University of Maryland, College Park, and despite a substantial scholarship, I chose to transfer. I also had admission letters from the University of Massachusetts Amherst and Stony Brook University.
-          </p>
+          Fast forward to my second semester at ASU, I found myself craving more academic challenges. I applied to more competitive schools and was accepted at both Stony Brook University and the University of Maryland, College Park. Ultimately, I chose to transfer to the University of Maryland, even though many of my CS and other course credits didn't transfer, requiring me to start from scratch. Despite this setback, I embraced the challenge and dove into my new courses with renewed determination.
+         </p>
           </Fade>
           <Fade direction='left'>
           <p>
-          Unable to take classes or apply for internships due to visa constraints, I spent the summer back home. Refreshed, I joined UMD College Park and immediately felt the challenge. After the first semester, I realized I was truly learning. The second semester brought new experiences, friends, and the highlight – Bitcamp hackathon. To close the gap, I took additional classes during the summer.
+          At the University of Maryland, I have taken advantage of every opportunity to expand my knowledge and skills. I have developed a strong foundation and working extensively with technologies. Some of the key courses I've taken include: 
+          
+          <br />
+          <ul>
+            <li>Introduction to Algorithms: This course solidified my understanding of fundamental algorithms and data structures, emphasizing problem-solving and analytical thinking.
+            </li>
+            <li>
+            Operating Systems: I learned about the inner workings of operating systems, including process management, memory management, and file systems.
+
+            </li>
+            <li>
+            Database Systems: This class provided me with a deep understanding of database design, SQL, and the importance of efficient data management.
+
+            </li>
+            <li>Artificial Intelligence: I explored the principles and techniques used in AI, including machine learning, neural networks, and natural language processing.
+            </li>
+            <li>Software Engineering: Here, I gained practical experience in software development methodologies, project management, and collaborative teamwork.
+            </li>
+            <li>Introduction to Data Science: This course introduced me to the essential concepts and techniques in data science, including data wrangling, visualization, statistical analysis, and machine learning.
+            </li>
+          </ul>
           </p>
           </Fade>
           <Fade direction='right'>
           <p>
-          Now in my third semester, I can confidently say it's been the most challenging yet. I learned new concepts, including a programming language (lambda) using Ocaml. Here I am today, proud of my journey and the growth I've achieved
-        </p>
+            In addition to my coursework, I've gained valuable experience working with a diverse team at ISU Dining, where I learned the importance of collaboration, adaptability, and delivering quality service. These skills have been invaluable in my tech projects, where teamwork and communication are key. <br />
+            My passion for technology extends beyond the classroom. I am particularly excited about the potential of machine learning and iOS development to create innovative solutions. Whether it's developing an app to simplify daily tasks or using machine learning to uncover new insights from data, I am eager to apply my skills to make a meaningful impact. <br />
+            When I'm not coding, you'll find me buried in a book on quantitative finance, philosophy,  experimenting with new recipes in the kitchen, or exploring the latest tech trends. I believe in the power of continuous learning and am always on the lookout for new challenges and opportunities to grow. <br />
+            I'm excited to connect with fellow tech enthusiasts, professionals, and anyone interested in collaborating on exciting projects. Feel free to reach out if you'd like to chat about the latest in tech, share coding tips, or just exchange favorite programming jokes!
+            </p>
         </Fade>
       </TextArea>
       <Footer/>
@@ -51,7 +72,7 @@ height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url('/images/storybg.jpg');
+  background-image: url('/images/bkg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

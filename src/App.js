@@ -12,7 +12,7 @@ function App() {
   const [currentSection, setCurrentSection] = useState(0);
   const [showDownArrow, setShowDownArrow] = useState(true);
   const appRef = useRef(null);
-
+  
   const handleDownArrowClick = () => {
     if (currentSection < sections.length - 1) {
       setCurrentSection((prevSection) => {
@@ -79,13 +79,16 @@ function App() {
 
   return (
     <div className="App" ref={appRef}>
-      {showDownArrow && <DownArrow src='/images/arrow.png' onClick={handleDownArrowClick} />}
-      <Header />
-      <Home id="home" />
-      <About id="about" />
-      <Links id="link" />
-      <Contact id="contact" />
-      <Footer />
+      <Container>
+        {showDownArrow && <DownArrow src='/images/arrow.png' onClick={handleDownArrowClick} />}
+        <Header />
+        <Home id="home" />
+        <About id="about" />
+        <Links id="link" />
+        <Contact id="contact" />
+        <Footer />
+      </Container>
+      
     </div>
   );
 }
@@ -109,3 +112,23 @@ const DownArrow = styled.img`
 `;
 
 export default App;
+
+// const kenny = keyframes`
+//   100% {
+//     opacity: 0;
+//     scale: 1;
+//   }
+// `;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/images/bkg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  position: relative;
+  overflow: hidden;
+`;

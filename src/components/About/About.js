@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Fade } from "react-awesome-reveal";
-
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
@@ -14,35 +14,34 @@ const About = () => {
         </Fade>
         
         <Cards>
-        <Fade direction='down'>
-            <Card>
-                <img src='/images/ios.png' alt='apple'/>
-                <Con>
-                <h2>iOS Development </h2>  
-                <p>Explore the world of iOS development and create powerful, user-friendly applications for Apple devices.</p>
-                </Con>
-            </Card>
-            </Fade>
-            <Fade direction='left'>
-            <Card>
-                <img src='/images/ui.png' alt='apple'/>
-                <Con>
-                <h2>Web Development</h2>  
-                <p>Dive into the realm of web development, crafting seamless user interfaces and building interactive web applications.</p>
-                </Con>
-            </Card>
-            </Fade>
-            <Fade direction='up'>
-            <Link to = '/Ml'> 
-            <Button>
+            <Fade direction='down'>
                 <Card>
-                    <img src='/images/web.png' alt='apple'/>
+                    <img src='/images/monitor.png' alt='apple'/>
                     <Con>
                     <h2>Machine Learning and Data Science</h2>  
                     <p>Delve into the fascinating fields of machine learning and data science, extracting insights and creating intelligent systems.</p>
                     </Con>
                 </Card>
-              </Button>
+            </Fade>
+            <Fade direction='left'>
+                <Card>
+                    <img src='/images/page.png' alt='apple'/>
+                    <Con>
+                    <h2>Web Development</h2>  
+                    <p>Dive into the realm of web development, crafting seamless user interfaces and building interactive web applications.</p>
+                    </Con>
+                </Card>
+            </Fade>
+            <Fade direction='up'>
+            <Link to = '/Ml'> 
+                
+                <Card>
+                <img src='/images/apple-logo.png' alt='apple'/>
+                <Con>
+                <h2>iOS Development </h2>  
+                <p>Explore the world of iOS development and create powerful, user-friendly applications for Apple devices.</p>
+                </Con>
+            </Card>
             </Link>
             </Fade>
         </Cards>
@@ -58,7 +57,7 @@ const Container = styled.div`
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url('/images/aboutbg.jpg');
+    // background-image: url('/images/bkg3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin:  0 auto;
@@ -92,13 +91,17 @@ const Cards = styled.div`
     width: 100%;
     max-width: 50%;
     text-align: left;
+    h2{
+        color: white;
+        }
+    
     `;
 
     const Card = styled.div`
     height: 100%;
     width: 100%;
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #333333;
     border-radius: 0.75rem;
     display: flex;
     align-items: center;
@@ -107,9 +110,9 @@ const Cards = styled.div`
     margin-bottom: 1rem;
   
     img {
-      height: auto; /* Adjust the height as needed */
-      width: auto; /* Auto width to maintain aspect ratio */
-      margin-right: 1rem; /* Add margin to create space between image and text */
+      height: 60px; 
+      width: 60px; 
+      margin-right: 1rem; 
     }
   
     transition: transform 0.3s ease-in-out;
@@ -132,10 +135,11 @@ const Con = styled.div`
     //   margin: 0;
     // }
     h2{
-        color: #333333;
+        color: white;
     }
     p{
         padding-top: 8px;
+        color: white;
     }
 
     @media only screen and (max-width: 485px) {

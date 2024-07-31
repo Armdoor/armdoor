@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <Container>
-      <Logo src='/images/logon.png' alt='logo' />
+      <Logo src='/images/log.png' alt='logo' />
       <Menu>
         <li> <ScrollLink to="home" spy={true} smooth={true} offset={-70} duration={500}>Home</ScrollLink></li>
         <li><ScrollLink to="about" spy={true} smooth={true} offset={-70} duration={500}>About</ScrollLink></li>
@@ -55,7 +55,8 @@ const Container = styled.div`
   right: 0;
   z-index: 1;
   backdrop-filter: blur(0.5px);
-  background-color: rgba(255, 255, 255, 0.5);
+  // background-color: rgba(255, 255, 255);
+  border-bottom: 2px solid #1F1F1F;
 `;
 
 
@@ -67,12 +68,15 @@ align-items: center;
 justify-content: space;
 font-weight: 600;
 text-transform: uppercase;
+
 padding: 0 10px;
 flex-wrap: nowrap;
 cursor: pointer;
+color: white;
 li{
   font-weight: 600;
   text-transform: uppercase;
+  
   padding: 0 10px;
   flex-wrap: nowrap;
   cursor: pointer;

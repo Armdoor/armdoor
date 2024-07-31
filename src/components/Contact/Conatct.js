@@ -80,8 +80,8 @@ const Container = styled.div`
   overflow: hidden;
   width: 100vw;
   max-width: auto;
-  background-image: url('/images/conatctbg.jpg');
-  background-size: cover;
+  // background-image: url('/images/conatctbg.jpg');
+  // background-size: cover;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

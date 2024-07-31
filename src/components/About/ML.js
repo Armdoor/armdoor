@@ -1,9 +1,15 @@
 import React from 'react'
 import {styled} from 'styled-components'
+import Linkheader from '../Linkheader/Linkheader';
+import Footer from '../Footer/Footer';
+
+
 const Ml = () => {
   return (
     <Te>
+        <Linkheader/>
         Hello 
+        <Footer/>
     </Te>
   )
 }
@@ -11,6 +17,5 @@ const Ml = () => {
 export default Ml;
 
 const Te = styled.div`
-    height: 250px;
-    width: 500px;`
-
+    // amd
+`
