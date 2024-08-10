@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Fade } from "react-awesome-reveal";
 import { Link } from 'react-router-dom';
+// import { Button } from 'react-scroll';
 
 const About = () => {
 
@@ -33,7 +34,7 @@ const About = () => {
                 </Card>
             </Fade>
             <Fade direction='up'>
-            <Link to = '/Ml'> 
+            
                 
                 <Card>
                 <img src='/images/apple-logo.png' alt='apple'/>
@@ -42,9 +43,15 @@ const About = () => {
                 <p>Explore the world of iOS development and create powerful, user-friendly applications for Apple devices.</p>
                 </Con>
             </Card>
-            </Link>
+            
             </Fade>
         </Cards>
+        <Link to="ml">
+            <Button>
+                 Projects
+                <img src='/images/arrwr.png' alt="arrow right" />
+            </Button>
+        </Link>
      </Container>
   )
 }
@@ -97,7 +104,7 @@ const Cards = styled.div`
     
     `;
 
-    const Card = styled.div`
+const Card = styled.div`
     height: 100%;
     width: 100%;
     backdrop-filter: blur(2px);
@@ -154,4 +161,25 @@ const Con = styled.div`
       }
 `;
 
+const Button = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: white;
+    border: none;
+    height: 45px;
+    width: 135px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 1rem;
+    border-radius: .75rem;
+    transition: background-color 0.3s ease-in-out;
+
+   
+img{
+width: 35px;
+height: 35px;
+}`;
 
