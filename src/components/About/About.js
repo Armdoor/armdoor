@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Fade } from "react-awesome-reveal";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { Button } from 'react-scroll';
 
 const About = () => {
