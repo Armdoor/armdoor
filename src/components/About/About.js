@@ -165,25 +165,25 @@ const Con = styled.div`
       }
 `;
 
-const Button = styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    background-color: white;
-    border: none;
-    height: 45px;
-    width: 135px;
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 1rem 1rem;
-    border-radius: .75rem;
-    transition: background-color 0.3s ease-in-out;
+// const Button = styled.button`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: row;
+//     background-color: white;
+//     border: none;
+//     height: 45px;
+//     width: 135px;
+//     color: black;
+//     font-size: 1.2rem;
+//     font-weight: 400;
+//     padding: 1rem 1rem;
+//     border-radius: .75rem;
+//     transition: background-color 0.3s ease-in-out;
 
    
-img{
-width: 35px;
-height: 35px;
-}`;
+// img{
+// width: 35px;
+// height: 35px;
+// }`;
 
