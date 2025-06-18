@@ -46,12 +46,12 @@ const About = () => {
             
             </Fade>
         </Cards>
-        <Link to="ml">
+        {/* <Link to="ml">
             <Button>
                  Projects
                 <img src='/images/arrwr.png' alt="arrow right" />
             </Button>
-        </Link>
+        </Link> */}
      </Container>
   )
 }
