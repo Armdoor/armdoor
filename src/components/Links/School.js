@@ -8,7 +8,9 @@ const School = () => {
   return (
     <Container>
       <Linkheader />
+      <Fade direction='down'>
       <h1>University Of Maryland, College Park</h1>
+      </Fade>
 
       <Grid>
             <Fade direction='left'>
@@ -65,11 +67,19 @@ const School = () => {
                 <p>CMSC 452: Design and Analysis of Computer Algorithms</p>
                 <p>CMSC 471: Introduction to Data Visualization</p>
                 <p>CMSC 390O: Special Topics in CS; The Coding Interview</p>
-                <p>EDHD 4xx: </p>
-                <p>EDHD 4xx: </p>
+                <p>EDHD 441: Child Growth and Development </p>
+                <p>EDHD 402: Social Development </p>
             </CardContainer>
             </Fade>
         </Grid>
+        <LastWrap>
+            <Fade direction='left'>
+              <CardContainerLast>
+                  <h2>Spring 2025</h2>
+                  <p>CMSC 426: Computer Vision</p>
+              </CardContainerLast>
+            </Fade>
+        </LastWrap>
       <Footer/>
     </Container>
   );
@@ -89,12 +99,14 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   h1{
+    color: white;
     padding-top: 15vh;
     padding-bottom: 50px;
   }
 
   @media only screen and (max-width: 485px) {
     h1{
+    color: white;
       font-size: 25px;
       padding-left: 20px;
     }
@@ -104,7 +116,7 @@ const Container = styled.div`
 
 
 const CardContainer = styled.div`
-  height: 250px;
+  height: 225px;
   width: 500px;
   padding-left: 25px;
   border-radius: 2rem;
@@ -161,6 +173,69 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 grid-auto-rows: minmax(100px, auto);
+padding-bottom: 20px;
+@media only screen and (max-width: 485px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}`;
+
+const CardContainerLast = styled.div`
+  height: 120px;
+  width: 500px;
+  padding-left: 25px;
+  border-radius: 2rem;
+  backdrop-filter: blur(.5px);
+  background: rgba(51, 51, 51, 0.8);
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: center; 
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05); /* Increase scale on hover */
+  }
+  h2{
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+  }
+  p{
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #E0E0E0;
+  }
+  @media only screen and (max-width: 485px) {
+    height: auto;
+  width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    justify-content: center;
+    h2{
+      color: #81B8D7;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display: flex;
+      justify-content: center; 
+      font-size: 18px;
+    }
+    p{
+      margin-bottom: 5px;
+      font-weight: 400;
+      padding-top: 5px;
+      font-size: 12px;
+    }
+  }
+`;
+const LastWrap = styled.div`
+display: centre;
+gap: 2px;
 padding-bottom: 50px;
 @media only screen and (max-width: 485px) {
   display: flex;
@@ -168,3 +243,4 @@ padding-bottom: 50px;
   align-items: center;
   justify-content: center;
 }`;
+

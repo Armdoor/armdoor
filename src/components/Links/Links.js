@@ -28,7 +28,7 @@ const Links = () => {
         <Buttons>
         <Fade direction='left'>
           <Button 
-            href="https://github.com/Armdoor/Resume/blob/main/Final_res.pdf"
+            href="https://github.com/Armdoor/Resume/blob/main/DA.pdf"
             onMouseEnter={() => handleHover('resume', true)} 
             onMouseLeave={() => handleHover('resume', false)}
           >
